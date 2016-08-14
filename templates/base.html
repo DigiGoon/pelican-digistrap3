@@ -102,7 +102,7 @@
 </head>
 <body>
 
-<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
+<!-- <div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
 	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
         <div class="navbar-header">
             {% if MENUITEMS or (PAGES and DISPLAY_PAGES_ON_MENU) or (categories and DISPLAY_CATEGORIES_ON_MENU) %}
@@ -151,9 +151,15 @@
             {% endif %}
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
+
     </div>
-</div> <!-- /.navbar -->
+</div> </.navbar -->
+
+{% if not HIDE_NAVBAR|default(False) %}
+    {% include 'includes/navbar.html' %}
+{% endif %}
+
+
 <!-- Banner -->
 {% if BANNER and BANNER_ALL_PAGES %}
     {% include 'includes/banner.html' %}
