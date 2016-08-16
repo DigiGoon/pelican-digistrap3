@@ -61,9 +61,7 @@
                         </li>
                     {% endfor %}
                 {% endif %}
-
             </ul>
-
 
             <ul class="nav navbar-nav navbar-right">
             {% if 'tipue_search' in PLUGINS %}
@@ -77,35 +75,6 @@
               <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             {% endif %}
             </ul>
-
-
-
-            <!-- {% if 'search' in NAVBAR_ELEMENTS and GOOGLE_CSE_ID %}
-                <div class="col-sm-3 col-md-3 pull-right">
-                    <form action="http://google.com/cse" class="navbar-form" role="search" id="cse-search-box">
-                    <div class="input-group">
-                        <input type="hidden" value="{{ GOOGLE_CSE_ID }}" name="cx">
-                        <input type="hidden" value="UTF-8" name="ie">
-                        <input type="text" id="srch-term" name="q" placeholder="Search" class="form-control">
-                        <div class="input-group-btn">
-                            <button type="submit" value="search" name="sa" class="btn btn-default"><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            {% endif %}
-
-            {% if 'social' in NAVBAR_ELEMENTS %}
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <p class="navbar-text">
-                        {% for name, link in SOCIAL %}
-                                <a class="navbar-link social-nav-link" href="{{ link }}"><i class="fa fa-{{ name|lower|replace('+','-plus') }} fa-lg"></i></a>
-                        {% endfor %}
-                    </p>
-                </li>
-            </ul>
-            {% endif %} -->
         </div>
         <!-- /.navbar-collapse -->
     </div>
