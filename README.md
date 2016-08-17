@@ -147,6 +147,19 @@ wish to enable it, set the `DISPLAY_CATEGORY_IN_BREADCRUMBS` flag to _True_.
 ### Navbar
 
 If you wish to use the inverse navbar from Bootstrap, set the flag `BOOTSTRAP_NAVBAR_INVERSE` to _True_.
+This theme also supports dropdown menu in navbar with one nesting.
+You can use the nesting in this manner:
+```
+MENUITEMS = (
+	    ('Home', '/'),
+	    ('Categories', (
+	    		   ('Foo', '/foo/bar/'),
+	    		   ('Foo', '/foo/bar/'),
+	    		   ),
+	    ),
+	    ('About Me', '/foo/bar'),
+            )
+```
 
 ### Related Posts
 
@@ -315,19 +328,6 @@ As an alternative, you may use [Shariff](https://github.com/heiseonline/shariff)
     * `SHARIFF_TWITTER_VIA` (`True`/`False`, uses `TWITTER_USERNAME`)
 
 For a detailed description of each setting, refer to [data attributes](https://github.com/heiseonline/shariff#options-data-attributes) description at the [Shariff README](https://github.com/heiseonline/shariff).
-
-### Nested Menu
-
-This theme supports dropdown menu in navbar with one nesting.
-You can use the nesting in this manner:
-```
-MENUITEMS = (
-	    ('Home', '/'),
-	    ('Foo', (
-       		    ('Bar', '/foo/bar/'),),),
-	    ('About Me', '/foo/bar'),
-            )
-```
 
 ### Tipue Search
 
