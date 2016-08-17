@@ -1,8 +1,8 @@
-# pelican-bootstrap3
+# pelican-digistrap3
 
 This is a Bootstrap 3 theme for Pelican, originally developed by
 [DandyDev](https://github.com/DandyDev).  It's fully responsive and contains
-sub-themes from the Bootswatch project.  Pelican-bootstrap3 is compatible with
+sub-themes from the Bootswatch project.  Pelican-digistrap3 is compatible with
 Pelican 3.3.0 and higher.
 
 ## CONTRIBUTING
@@ -292,11 +292,7 @@ The same image options for Open Graph (see above) can be used for setting images
 
 ### Twitter Timeline
 
-The theme can show your twitter timeline in the sidebar. To enable, provide a `TWITTER_USERNAME` and a `TWITTER_WIDGET_ID`.
-
-To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and select `Create new`. You'll find the TWITTER_WIDGET_ID under the html or in the site url:
-
-`https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
+The theme can show your twitter timeline in the sidebar. To enable, provide a `TWITTER_USERNAME` and set `TWITTER_TIMELINE` to `TRUE`.
 
 ### AddThis
 
@@ -319,6 +315,19 @@ As an alternative, you may use [Shariff](https://github.com/heiseonline/shariff)
     * `SHARIFF_TWITTER_VIA` (`True`/`False`, uses `TWITTER_USERNAME`)
 
 For a detailed description of each setting, refer to [data attributes](https://github.com/heiseonline/shariff#options-data-attributes) description at the [Shariff README](https://github.com/heiseonline/shariff).
+
+### Nested Menu
+
+This theme supports dropdown menu in navbar with one nesting.
+You can use the nesting in this manner:
+```
+MENUITEMS = (
+	    ('Home', '/'),
+	    ('Foo', (
+       		    ('Bar', '/foo/bar/'),),),
+	    ('About Me', '/foo/bar'),
+            )
+```
 
 ### Tipue Search
 
